@@ -1,4 +1,4 @@
-# Масштабирование группы виртуальных машин по расписанию
+# Масштабирование группы виртуальных машин Yandex Compute Cloud по расписанию с помощью функции Yandex Cloud Functions
 
 Разверните инфраструктуру для масштабирования группы виртуальных машин по расписанию. Вы создадите [группу ВМ](https://yandex.cloud/ru/docs/compute/concepts/instance-groups/) с помощью сервиса [Yandex Compute Cloud](https://yandex.cloud/ru/docs/compute/) и настроите для нее [масштабирование](https://yandex.cloud/ru/docs/compute/concepts/instance-groups/scale) по расписанию. Размером группы ВМ будет управлять [функция](https://yandex.cloud/ru/docs/functions/concepts/function) [Yandex Cloud Functions](https://yandex.cloud/ru/docs/functions/), запускаемая по [таймеру](https://yandex.cloud/ru/docs/functions/concepts/trigger/timer).
 
