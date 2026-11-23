@@ -64,9 +64,9 @@ resource "yandex_vpc_subnet" "vm-scale-scheduled-subnet-a" {
   network_id     = yandex_vpc_network.vm-scale-scheduled-network.id
 }
 
-resource "yandex_vpc_subnet" "vm-scale-scheduled-subnet-b" {
-  name           = "vm-scale-scheduled-subnet-b"
-  zone           = "ru-central1-b"
+resource "yandex_vpc_subnet" "vm-scale-scheduled-subnet-d" {
+  name           = "vm-scale-scheduled-subnet-d"
+  zone           = "ru-central1-d"
   v4_cidr_blocks = ["192.168.2.0/24"]
   network_id     = yandex_vpc_network.vm-scale-scheduled-network.id
 }
@@ -86,7 +86,7 @@ resource "yandex_compute_instance_group" "vm-scale-scheduled-ig" {
   allocation_policy {
     zones = [
       "ru-central1-a",
-      "ru-central1-b"
+      "ru-central1-d"
     ]
   }
 
@@ -110,7 +110,7 @@ resource "yandex_compute_instance_group" "vm-scale-scheduled-ig" {
       network_id = yandex_vpc_network.vm-scale-scheduled-network.id
       subnet_ids = [
         yandex_vpc_subnet.vm-scale-scheduled-subnet-a.id,
-        yandex_vpc_subnet.vm-scale-scheduled-subnet-b.id
+        yandex_vpc_subnet.vm-scale-scheduled-subnet-d.id
       ]
     }
 
